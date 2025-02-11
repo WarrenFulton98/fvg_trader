@@ -33,8 +33,8 @@ A Python-based trading bot that implements a Fair Value Gap (FVG) strategy with 
 ### Option 1: Installing from Source
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fvg_trading_bot.git
-cd fvg_trading_bot
+git clone https://github.com/yourusername/fvg_trader.git
+cd fvg_trader
 
 # Create and activate virtual environment
 python -m venv venv
@@ -53,7 +53,7 @@ pip install -e .
 1. Install test dependencies:
 ```bash
 # If you installed with pip
-pip install "fvg_trading_bot[dev]"
+pip install "fvg_trader[dev]"
 
 # Or if you're developing locally
 pip install -e ".[dev]"
@@ -65,7 +65,7 @@ pip install -e ".[dev]"
 pytest
 
 # Run with coverage report
-pytest --cov=fvg_trading_bot
+pytest --cov=fvg_trader
 
 # Run specific test file
 pytest tests/test_models.py
@@ -110,7 +110,7 @@ Example of adding a new test:
 ```python
 # In tests/test_trading.py
 import pytest
-from fvg_trading_bot.trading.trading_bot import TradingBot
+from fvg_trader.trading.trading_bot import TradingBot
 
 def test_new_feature():
     # Setup
@@ -187,7 +187,7 @@ The bot includes comprehensive visualization tools that show:
 
 Example of generating visualizations:
 ```python
-from fvg_trading_bot.visualization.performance_viz import PerformanceVisualizer
+from fvg_trader.visualization.performance_viz import PerformanceVisualizer
 
 visualizer = PerformanceVisualizer(trades_df, price_history_df)
 visualizer.save_all_plots('trading_analysis')
@@ -195,9 +195,9 @@ visualizer.save_all_plots('trading_analysis')
 
 ## Project Structure
 ```
-fvg_trading_bot/
+fvg_trader/
 │
-├── fvg_trading_bot/
+├── fvg_trader/
 │   ├── models/
 │   │   ├── fair_value_gap.py
 │   │   └── trade.py
