@@ -42,6 +42,7 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
 # Install in development mode
 pip install -e .
+```
 
 ## Usage
 
