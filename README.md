@@ -46,6 +46,68 @@ pip install -e .
 
 ## Usage
 
+## Testing
+
+### Setting Up Test Environment
+
+1. Install test dependencies:
+```bash
+# If you installed with pip
+pip install "fvg_trading_bot[dev]"
+
+# Or if you're developing locally
+pip install -e ".[dev]"
+```
+
+2. Run the test suite:
+```bash
+# Run all tests
+pytest
+
+# Run with coverage report
+pytest --cov=fvg_trading_bot
+
+# Run specific test file
+pytest tests/test_models.py
+```
+
+### Test Structure
+
+The test suite covers:
+
+1. Models (`test_models.py`)
+   - FairValueGap creation and validation
+   - Trade object creation and properties
+
+2. Analyzers (`test_analyzers.py`)
+   - Structure analysis
+   - Support/resistance detection
+   - FVG detection
+
+3. Trading Logic (`test_trading.py`)
+   - Bot initialization
+   - Position sizing
+   - Trade execution
+
+4. Backtesting (`test_backtesting.py`)
+   - Backtester initialization
+   - Results validation
+   - Performance metrics
+
+5. Visualization (`test_visualization.py`)
+   - Chart generation
+   - Performance metrics visualization
+
+### Adding New Tests
+
+When adding new features, please ensure:
+1. Test coverage for new functionality
+2. Integration tests if needed
+3. proper use of pytest fixtures
+4. Async tests for trading functions
+
+Example
+
 ### Quick Start
 ```python
 from fvg_trader.trading.trading_bot import TradingBot
