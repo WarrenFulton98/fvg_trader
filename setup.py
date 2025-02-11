@@ -24,8 +24,15 @@ setup(
         'pyparsing>=3.1.0',
         'scipy>=1.11.0',
     ],
-    author="Your Name",
-    author_email="your.email@example.com",
+    extras_require={
+        'dev': [
+            'pytest>=7.4.0',
+            'pytest-asyncio>=0.21.0',
+            'pytest-cov>=4.1.0',
+        ],
+    },
+    author="Warren Fulton",
+    author_email="warren.fulton98@gmail.com",
     description="A trading bot that implements fair value gap strategy with break of structure confirmation",
     long_description=long_description,
     long_description_content_type="text/markdown",
