@@ -106,7 +106,22 @@ When adding new features, please ensure:
 3. proper use of pytest fixtures
 4. Async tests for trading functions
 
-Example
+Example of adding a new test:
+```python
+# In tests/test_trading.py
+import pytest
+from fvg_trading_bot.trading.trading_bot import TradingBot
+
+def test_new_feature():
+    # Setup
+    bot = TradingBot(symbols=['AAPL'])
+    
+    # Execute
+    result = bot.new_feature()
+    
+    # Assert
+    assert result == expected_value
+```
 
 ### Quick Start
 ```python
