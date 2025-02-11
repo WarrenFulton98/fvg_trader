@@ -24,20 +24,24 @@ A Python-based trading bot that implements a Fair Value Gap (FVG) strategy with 
 - Python 3.8 or higher
 - pip package manager
 
-### Installing from Source
+## Installation & Setup
+
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
+
+### Option 1: Installing from Source
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fvg_trader.git
-cd fvg_trader
+git clone https://github.com/yourusername/fvg_trading_bot.git
+cd fvg_trading_bot
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
 # Install in development mode
 pip install -e .
-```
-
-### Installing from PyPI
-```bash
-pip install fvg_trader
-```
 
 ## Usage
 
