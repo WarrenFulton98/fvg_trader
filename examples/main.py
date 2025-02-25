@@ -6,9 +6,9 @@ from datetime import datetime, timedelta
 # Add the parent directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from ..trading.trading_bot import TradingBot
-from ..backtesting.backtester import Backtester
-from ..utils.logger import get_logger
+from trading.trading_bot import TradingBot
+from backtesting.backtester import Backtester
+from utils.logger import get_logger
 
 logger = get_logger(__name__)
 

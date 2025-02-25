@@ -4,11 +4,11 @@ import asyncio
 import yfinance as yf
 import pandas as pd
 from datetime import datetime
-from ..models.trade import Trade
-from ..models.fair_value_gap import FairValueGap
-from ..analyzers.structure_analyzer import StructureAnalyzer
-from ..analyzers.fvg_detector import FVGDetector
-from ..utils.logger import get_logger
+from models.trade import Trade
+from models.fair_value_gap import FairValueGap
+from analyzers.structure_analyzer import StructureAnalyzer
+from analyzers.fvg_detector import FVGDetector
+from utils.logger import get_logger
 
 logger = get_logger(__name__)
 

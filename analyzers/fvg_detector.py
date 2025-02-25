@@ -1,6 +1,6 @@
 from typing import List
 import pandas as pd
-from ..models.fair_value_gap import FairValueGap
+from models.fair_value_gap import FairValueGap
 
 class FVGDetector:
     def __init__(self, min_gap_size: float, volume_threshold: float):

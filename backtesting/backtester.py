@@ -2,9 +2,9 @@
 from typing import List, Dict
 import pandas as pd
 import yfinance as yf
-from ..trading.trading_bot import TradingBot
-from ..utils.logger import get_logger
-from ..visualization.performance_viz import PerformanceVisualizer
+from trading.trading_bot import TradingBot
+from utils.logger import get_logger
+from visualization.performance_viz import PerformanceVisualizer
 
 logger = get_logger(__name__)
 
@@ -100,7 +100,7 @@ class Backtester:
         
         # Create visualizations
         visualizer = PerformanceVisualizer(trades_df, df)
-        visualizer.save_all_plots('trading_analysis')
+        #visualizer.save_all_plots('trading_analysis')
         
         return trades_df
 
